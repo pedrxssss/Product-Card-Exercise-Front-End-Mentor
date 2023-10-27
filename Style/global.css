@@ -1,0 +1,147 @@
+:root {
+    /* Font and Font Size */
+    --main-font: 'Montserrat', sans-serif;
+    ;
+    --secondary-font: 'Fraunces', serif;
+    ;
+    --font-size: 0.875rem;
+
+    /* Primary Colors */
+    --dark-cyan: #3c8067;
+    --cream: #f2ebe3;
+    /* Neutral */
+    --very-dark-blue: #1c232b;
+    --dark-grayish-blue: #6c7289;
+    --white: #ffffff;
+}
+
+.main {
+    width: 300px;
+    margin: 100px auto;
+
+    background: var(--white);
+    border-radius: 8px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+}
+
+.image-mobile {
+    width: 100%;
+    margin: 0 auto;
+    border: none;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.image-desktop {
+    display: none;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    width: 260px;
+    margin: 0 auto;
+    margin-top: .5rem;
+}
+
+.main-content h3 {
+    font-size: .65rem;
+    
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    font-weight: 400;
+    color: var(--dark-grayish-blue);
+}
+
+.title {
+    font-family: var(--secondary-font);
+    font-size: 1.7rem;
+}
+
+.text {
+    color: var(--dark-grayish-blue);
+    font-size: .8rem;
+}
+
+.text strong {
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.price-value {
+    font-family: var(--secondary-font);
+    color: var(--dark-cyan);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.price-promotion {
+    color: var(--dark-grayish-blue);
+    text-decoration-line: line-through;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+
+    background: var(--dark-cyan);
+    border: none;
+    border-radius: 5px;
+    padding: .7rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+    font-weight: 600;
+    font-size: .7;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #255946;
+    transition: .3s;
+}
+
+@media (min-width: 1024px) {
+    .main {
+        display: flex;
+        gap: .5rem;
+        width: 500px;
+    }
+    
+    .image-mobile {
+        display: none;
+    }
+
+    .image-desktop {
+        display: block;
+        width: 100%;
+        border-bottom-left-radius: 8px;
+        border-top-left-radius: 8px;
+    }
+
+    .main-content {
+        width: 100%;      
+        margin: .5rem auto;
+        justify-content: space-evenly;
+        padding: 1rem;
+    }
+
+    .button {
+        margin-bottom: 0;
+    }
+}
